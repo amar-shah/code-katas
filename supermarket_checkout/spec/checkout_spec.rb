@@ -1,9 +1,9 @@
 require File.expand_path('../spec_helper', __FILE__)
 
 describe Checkout do
-  let(:fruit_tea) { stub('item', :code => 'FR1', :price => 3.11) }
-  let(:strawberries) { stub('item', :code => 'SR1', :price => 5.0) }
-  let(:coffee) { stub('item', :code => 'CF1', :price => 11.23) }
+  let(:fruit_tea) { double('item', :code => 'FR1', :price => 3.11) }
+  let(:strawberries) { double('item', :code => 'SR1', :price => 5.0) }
+  let(:coffee) { double('item', :code => 'CF1', :price => 11.23) }
 
   let(:buy_one_get_one_free_rule) do
     BuyOneGetOneFreeRule.new(fruit_tea.code,fruit_tea.price)
